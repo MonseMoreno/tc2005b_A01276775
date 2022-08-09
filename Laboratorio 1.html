@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title> A01276775_Lab1 </title>
+    </head>
+
+    <body>
+        <div id=Content>
+            <header>
+                <H2> Laboratorio 1 <br>
+                    Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información <br>
+                </H2>
+            </header>
+
+            <hr>
+
+            <div id="Datos">
+                Nombre: Monserrat Karime Moreno Casas <br>
+                Edad: 20 años <br>
+                Matricula : A01276775 <br>
+                Correo electrónico: A01276775@tec.mx<br>
+            </div>
+            
+            <hr>
+
+            <div id="Sobre mi">
+                <H3><em>Datos sobre mí</em></H3>
+                <p> Hola mi nombre es <strong> Monserrat Karime Moreno Casas </strong> una estudiante de ITC en el
+                    Tecnológico de Monterrey campus Querétaro
+                    me considero una persona reservada, incluso tímida, pero también soy una persona graciosa, comprometida,
+                    comprensiva, tolerante y responsable.
+
+                    Mi comida favorita es la milanesa y la barbacoa, mi animal favorito es el lobo, mis pasatiempos
+                    actualmente son escribir, jugar videojuegos (mi favorito actualmente es Valorant),
+                    también me gusta mucho la ilustración digital donde he trabajado para la creación de emotes o banners
+                    para creadores de contenidos pequeños y actualmente
+                    actualmente los softwares que sé utilizar son <a href=https://www.systemax.jp/en/sai />Paint Tool
+                    Sai</a> y <a href=https://procreate.art>Procreate</a>.
+                </p>
+
+                <table style="border-color: rgb(71, 55, 221)" ; border="3" align="center">
+                    <tr>
+                        <td> Me gusta </td>
+                        <td> No me gusta </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Dibujar</li>
+                                <li>Bailar</li>
+                                <li>Música </li>
+                                <li>Dormir</li>
+                                <li>Jugar videojuegos</li>
+                            </ul>
+                        </td>
+
+                        <td>
+                            <ul>
+                                <li>Chocolate </li>
+                                <li>Piña</li>
+                                <li>Levantarme temprano</li>
+                                <li>Cebolla</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <br>
+            <hr>
+
+            <section id="Preguntas">
+                <article class="Pregunta">
+                    <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+                    <p>El internet se trata de una serie de computadoras conectadas enté sí, las cuales conforman una red de
+                        comunicación mundial.
+                        Por otro lado la World Wide Web es un sistema que funciona atraves de las computadoras interconectadas
+                        (Internet)
+                        por el cual se pueden transmitir diversos tipos de datos a través de HTTP (<em>Protocolo de
+                            Transferencia de Hipertextos </em>). </p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuáles son las partes de un URL?</h3>
+                    <p> Comenzando con por la definición URL por sus siglas significa <em>Uniform Resource Locator</em> <br> 
+                        Y consta de varias partes que son: </p>
+                    <ul>
+                        <li> <strong> PROTOCOLO </strong> HTTP o HTTPS Formato en que se van a enviar e intercambiar los datos
+                            que permitan cargar la página web</li>
+                        <li> <strong> DOMINIO: </strong> Nombre de la dirección IP del servidor donde se almacena la página
+                        </li>
+                        <li> <strong> CARPETA: </strong> Hace referencia al un fichero o archivo de la página web </li>
+                        <li> <strong> PARÁMETROS: </strong> Datos adicionales que identifican o filtran un recurso en elservidor </li>
+                    </ul>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+                    <ul>
+                        <li> <strong> GET: </strong> Realiza una petición a un recurso específico</li>
+                        <li> <strong> HEAD: </strong> Funcionalmente hablando pide una respuesta similar al GET pero sin el
+                            cuerpo de la respuesta el servidor responde con líneas y headers.
+                        <li> <strong> POST: </strong> Enviar información/recursos al servidor.
+                        <li> <strong> PUT: </strong> Reemplaza todas las representaciones actuales del recurso, es decir sube un archivo.
+                        <li> <strong> PATCH: </strong> Realiza modificaciones parciales al recurso.
+                        <li> <strong> DELETE: </strong> Borra un recurso en específico.
+                    </ul>
+
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y
+                        contraseña en algún sitio? ¿Por qué?</h3>
+                    <p> Al ingresarse por primera vez en el servidor se utilizaría el método POST, ya que, se tiene que
+                        registrar por primera vez en la base de datos y enviar un recurso. </p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un
+                        URL?</h3>
+                    <p> El metodo GET, recupera la informacion de un lado y redirije o muestra al usuario es decir este método
+                        se usaría para solicitar al servidor que envíe un recurso de regreso</p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+                    </h3>
+                    <p> No se trata de un error, realmente significa que la página a cargado correctamente </p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al
+                        sitio y se encontró con un error 404? ¿Por qué?</h3>
+                    <p> Este tipo de errores con esos códigos de estado indican a los buscadores que la página no existe y que
+                        el contenido no se debería indexar aunque igual es importante
+                        que el desarrollador intente incluir algun mecanismo que permita a los usuarios avisarte si hay algún
+                        enlace roto.</p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al
+                        sitio y se encontró con un error 500? ¿Por qué?</h3>
+                    <p> En este caso el desarrollador sí sería responsable de corregir el sitio web ya que el error 500
+                        significa que ha sucedido un error al intentar acceder al servidor. </p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos
+                        elementos de HTML 4 que en HTML5 estén desaprobados.</h3>
+                    <p> Un atributo desaprobado o despreciado es aquel que ha quedado anticuado por la presencia de estructuras
+                        nuevas </p>
+                    <ul>
+                        <li> <strong> acronym: </strong> Para abreviaciones se mantiene la etiqueta abbr </li>
+                        <li> <strong> applet: </strong> Sustituida por object </li>
+                        <li> <strong> isindex: </strong> Se utilizaba para mandar información al servidor dejó de ser funcional
+                            desde la aparición de los formularios.</li>
+                        <li> <strong> dir: </strong> Para crear listas, actualmente recomienda usar ul</li>
+                    </ul>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h3>
+                    <ul>
+                        <li> Se simplica el DOCTYPE: !DOCTYPE html </li>
+                        <li> HTML5 permite incluir elementos de SVG y MathML. </li>
+                        <li> Se introducen nuevos elementos, como: section, article, aside, header, footer, etc.</li>
+                        <li> Se introducen nuevos atributos, como: media, charset, autofocus, placeholder, etc.</li>
+                    </ul>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+                    <ul>
+                        <li> <strong> Estructura: </strong> table </li>
+                        <li> <strong> Leyenda: </strong> caption </li>
+                        <li> <strong> Cuerpos: </strong> tbody, thead, tfoot </li>
+                        <li> <strong> Filas: </strong> tr </li>
+                        <li> <strong> Celdas: </strong> td, th </li>
+                        <li> <strong> Columnas: </strong> col, colgroup </li>
+                    </ul>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+                    <p> Los tipos de entrada comunes son: button, checkbox, file , hidden, image , password, radio , reset ,
+                        submit y text.</p>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para
+                        descubrirlo: (Al responder la pregunta recuerda poner el navegador que utilizas)</h3>
+                    <ul>
+                        <li> <Strong> Opera GX: </Strong> 474 de 555 puntos </li>
+                        <li> <Strong> Chrome: </Strong> 476 de 555 puntos </li>
+                    </ul>
+                </article>
+
+                <article class="Subtitulo">
+                    <h1 style="text-align:center">Sobre el ciclo de vida y desarrollo de los sistemas de información</h1>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+                    <ol>
+                        <li> Nacimiento </li>
+                        <li> Desarrollo</li>
+                        <li> Operación</li>
+                        <li> Mantenimiento</li>
+                        <li> Muerte </li>
+                    </ol>
+                </article>
+
+                <article class="Pregunta">
+                    <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+                    <ol>
+                        <li> Planificación </li>
+                        <li> Definición de requisitos </li>
+                        <li> Diseño</li>
+                        <li> Pruebas</li>
+                        <li> Puesta en marcha</li>
+                        <li> Uso y mantenimiento</li>
+                        <li> Disposición</li>
+                    </ol>
+                </article>
+            </section>
+    <!-- <div class="clearfix"></div> -->
+            <br>
+            <hr>
+
+            <div id="Referencias">
+                <h1> Referencias: </h1>
+                <ul>
+                    <li> ViewNext. (s. f.). <em>El ciclo SDLC en 7 fases. </em> <a
+                            href="https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/">
+                            https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/ </a></li>
+                    <li> PowerData. (s. f.). <em> Ciclo de vida de un sistema de información: fases y componentes. </em> <a
+                            href=" https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes">
+                            https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes
+                        </a></li>
+                    <li> <em>Formularios en HTML5 - Aprende sobre desarrollo web </em> MDN Web Docs. <a
+                            href="https://developer.mozilla.org/es/docs/Learn/Forms">
+                            https://developer.mozilla.org/es/docs/Learn/Forms</a></li>
+                    <li> D. (2020, 27 febrero). <em>Diferencia entre internet y web. </em>Diferenciador. <a
+                            href=" https://www.diferenciador.com/diferencia-entre-internet-y-web/">
+                            https://www.diferenciador.com/diferencia-entre-internet-y-web/ </a></li>
+                    <li> BBC News Mundo. (2019, 12 marzo). <em> ¿Cuál es la diferencia entre internet y la web? (y por qué
+                            muchos las confunden). </em> <a href=" https://www.bbc.com/mundo/noticias-47538812">
+                            https://www.bbc.com/mundo/noticias-47538812 </a></li>
+                    <li> D. (2019, 17 enero). <em>Partes de una dirección web. </em> Partes de cualquier cosa. <a
+                            href=" https://partesde.info/direccion-web/"> https://partesde.info/direccion-web/ </a></li>
+                    <li> Developer Mozilla. (2022, 15 febrero). <em>¿Qué es una URL? - Aprende sobre desarrollo web </em> <a
+                            href=" https://developer.mozilla.org/es/docs/Learn/Common_questions/What_is_a_URL">
+                            https://developer.mozilla.org/es/docs/Learn/Common_questions/What_is_a_URL </a></li>
+                    <li>Morales, W. (2021, 1 junio). <em> Tipos de errores HTTP y cómo resolverlos.</em> Webempresa. <a
+                            href=" https://www.webempresa.com/blog/tipos-errores-http-como-resolverlos.html">https://www.webempresa.com/blog/tipos-errores-http-como-resolverlos.html</a>
+                    </li>
+                    <li> Velasco, P. (2021, 2 septiembre).<em>El ciclo SDLC en 7 fases. </em> <a
+                            href="https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/">
+                            https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/ </a></li>
+                    <li> Google. (s. f.). <em> Cómo corregir errores soft 404 | Centro de la Búsqueda de Google |. </em> Google
+                        Developers. <a href="https://developers.google.com/search/docs/advanced/crawling/soft-404-errors?hl=es">
+                            https://developers.google.com/search/docs/advanced/crawling/soft-404-errors?hl=es </a></li>
+                    <li> Developer Mozilla. (2022, 15 febrero). <em> Referencia de Elementos HTML - HTML: Lenguaje de etiquetas
+                            de hipertexto | </em>MDN. <a href="  https://developer.mozilla.org/es/docs/Web/HTML/Element">
+                            https://developer.mozilla.org/es/docs/Web/HTML/Element</a></li>
+                    <li> TODO HTML. (s. f.). <em>05.Tags y atributos desaprobados en HTML</em> Todo HTML. <a
+                            href="https://sites.google.com/site/dwebhtml/reference/deprecated">
+                            https://sites.google.com/site/dwebhtml/reference/deprecated </a></li>
+                    <li>Developer Mozilla. (2022, 15 febrero). <em> tabla - HTML: Lenguaje de etiquetas de hipertexto | </em>
+                        MDN. <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/table">
+                            https://developer.mozilla.org/es/docs/Web/HTML/Element/table </a></li>
+                </ul>
+
+            </div>
+            <hr>
+
+            <footer> Editor de html: Visual Studio Code <a href="https://code.visualstudio.com/"> Link </a> <br>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
+                    width="30"
+                    height="40">
+            </footer>
+        </div>
+    </body>
+
+</html>
