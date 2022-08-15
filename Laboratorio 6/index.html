@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel="stylesheet" href="css/style.css" media="screen,projection"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <meta charset="utf-8" />
+        <title> A01276775_Lab6 </title>
+    </head>
+
+    <body>
+        <div id=Content>
+            <header >
+                <img id="logo" src="https://i.pinimg.com/564x/89/bf/df/89bfdf78b7ccb004e613a3e5c90e22f5.jpg" alt="Imagen Anya">
+                                
+                <H2> <center> Laboratorio 6 </center>  <br>
+                    <center>  Programación Orientada a Eventos</center> <br>
+                </H2>
+            </header>
+
+            <hr>
+
+            <div id="Datos">
+                Nombre: Monserrat Karime Moreno Casas <br>
+                Edad: 20 años <br>
+                Matricula : A01276775 <br>
+                Correo electrónico: A01276775@tec.mx<br>
+            </div>
+            
+            <hr>
+<!-- --------------------------- INSTRUCCIONES  ----------------------- -->
+
+            <div id = "Instrucciones">
+                <h3><strong><em> Instrucciones </em></strong></h3>
+                <p align="justify"> 
+                    1. Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. 
+                    La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password.
+                    Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de passwords de estado del arte,
+                    con la mejor experiencia para el usuario. <br> <br>
+
+                    2. Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para vender 3 productos de tu interés,
+                    con los precios y promociones a tu gusto.
+                    La página debe permitir al usuario escoger la cantidad de unidades de cada producto,
+                    y debe mostrar el precio total, el IVA que se está cargando, y toda la información que consideres pertinente
+                    para que la experiencia del usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto. <br> <br>
+
+                    3. [Opcional] Con JavaScript y HTML5 y CSS, desarrolla una página con alguna temática o problema de tu interés.
+                    La página debe contener una forma y debes realizar las validaciones necesarias. Después de validar la forma, 
+                    la página debe desplegar información relacionada con los datos introducidos en la forma, 
+                    es decir la solución del problema o información respectiva a los datos introducidos. <br> <br> </p>
+            </div>
+
+<!-- ---------------------------- EJERCICIOS  ----------------------- -->
+
+            <div id="Ejercicios"> 
+
+                <!-- EJERCICIO 1  -->
+                <H3 align="center"><em> Ejercicio 1</em></H3>
+
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+
+
+                <!-- EJERCICIO 2  -->                                
+                <H3 align="center"><em> Ejercicio 2</em></H3>
+                <p align="justify"> <strong> Entrada: </strong> Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. <br> 
+                    <strong> Salida: </strong> La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.
+                </p>
+                <button id="Ejercicio 2" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
+
+                <!-- EJERCICIO 3  -->
+                <H3 align="center"><em> Ejercicio 3</em></H3>
+                <p align="justify"> <strong> Función: </strong> contador. <br> <strong> Parámetros: </strong> Un arreglo de números. <br> 
+                    <strong> Regresa: </strong> La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.
+                </p>
+                <button id="Ejercicio 3" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue" >Ver ejercicio</button>
+                <div id="contenedor_ej3"></div>
+                
+                <!-- EJERCICIO 4  -->               
+                <H3 align="center"><em> Ejercicio 4</em></H3>
+                <p align="justify"> <strong> Función: </strong>  promedios <br> <strong> Parámetros: </strong> Un arreglo de arreglos de números.  <br> 
+                    <strong> Regresa: </strong> Un arreglo con los promedios de cada uno de los renglones de la matriz.
+                </p>
+                <button id="Ejercicio 4" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
+                <div id="contenedor_ej4"></div>    
+                
+                <!-- EJERCICIO 5  -->                
+                <H3 align="center"><em> Ejercicio 5</em></H3>
+                <p align="justify"> <strong> Función: </strong>  inverso <br> <strong> Parámetros: </strong> Un número <br> 
+                    <strong> Regresa: </strong> El número con sus dígitos en orden inVer ejercicioso.
+                </p>
+                <button id="Ejercicio 5" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
+                <div id="contenedor_ej5"></div>    
+
+                <!-- EJERCICIO 6  -->                
+                <H3 align="center"><em> Ejercicio 6</em></H3>
+                <p align="justify"> Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, 
+                    alguna problemática que hayas identificado en algún ámbito, un problema de programación que hayas resuelto en otro
+                    lenguaje,
+                    un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML, y la solución implementada en
+                    JavaScript,
+                    utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra
+                    los resultados
+                    en el documento HTML.
+                </p>
+
+                <button id="Ejercicio 6" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
+                <div id="contenedor_ej6"></div>  
+
+            </div>      
+
+            <br>
+
+            
+
+            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+
+            <hr>
+
+            <div id="Preguntas">
+                <h3> <em> <center> PREGUNTAS DEL LABORATORIO </center></h3>
+                <center> <img  src = "https://cdn-icons-png.flaticon.com/512/1101/1101694.png" width = 70px height = 70px; alt = "ilustración" /> </center>
+                <article class = "Pregunta">
+                    <h3> ¿Qué diferencias y semejanzas hay entre Java y JavaScript? </h3>
+                    Diferencias:
+                    <ul>
+                        <li>Java es un lenguaje de programación orientado a objetos puros <br> JavaScript se basa en prototipos y emula la programacion ortientada objetos</li>
+                        <li>Java tiene variables definidas, JavaScript es un lenguaje mas fexible</li>
+                        <li>Java fuertemente tipado, JavaScript debilmente tipado</li>
+                        <li></li>
+                    </ul>
+                    Semejanzas 
+                    <ul>
+                        <li>Provienen de C</li>
+                        <li>Ambos trabajan POO</li>
+                    </ul>
+                    
+                </article>
+
+                <article class = "Pregunta">
+                    <h3> ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*) </h3>
+                    <ul>
+                        <li><strong> getMonth() </strong> devuelve el numero del mes (inicia desde 0)</li>
+                        <li><strong> getDate() </strong> devuelve el dia del mes (inicia desde 0)</li>
+                        <li><strong> getDay() </strong> devuelve el dia de la semana (inicia desde 0)</li>
+                        <li><strong> getHours() </strong> devuelve la hora actual (inicia desde 0, formato 24hr)</li>
+                        <li><strong> getMinutes() </strong> devuelve el numero del mes (inicia desde 0)</li>
+                    </ul>
+                </article>
+
+                <article class = "Pregunta">
+                    <h3> ¿Qué métodos tienen los arreglos? (Menciona al menos 5*) </h3>
+                    <ul>
+                        <li><strong> lenght() </strong> regresa la longitud del arreglo </li>
+                        <li><strong> split() </strong> separa el arreglo por caractéres  </li>
+                        <li><strong> push() </strong> agrega un valor al arreglo </li>
+                        <li><strong> pop() </strong> elimina un valor del arreglo </li>
+                        <li><strong> sort() </strong> ordena el arreglo </li>
+                    </ul>
+                </article>
+
+                <article class = "Pregunta">
+                    <h3> ¿Cómo se declara una variable con alcance local dentro de una función? </h3>
+                    <p> Se declara con <em>let</em> </p>
+                </article>
+
+                <article class = "Pregunta">
+                    <h3> ¿Qué implicaciones tiene utilizar variables globales dentro de funciones? </h3>
+                    <p> Las variables globales son utilizadas, como su nombre lo dice, de manera global, es decir no existe ningun momento 
+                        de muerte para estas, pueden ser utilizadas en cualquier parte del código </p>
+                </article>
+
+            </div>
+            <hr>
+
+                <div id = "Referencias" >
+                    <h1> Referencias: </h1>
+                    <ul>
+                        <li> Moreno, C. (2020, 15 enero). <em>  Funciones sobre arreglos que debes conocer en Javascript.  </em> Medium. <a href = "https://medium.com/@khriztianmoreno/funciones-sobre-arreglos-que-debes-conocer-en-javascript-bae9d9ff8e52"> https://medium.com/@khriztianmoreno/funciones-sobre-arreglos-que-debes-conocer-en-javascript-bae9d9ff8e52 </a></li>
+                        <li> Digital Learning. (2017, 12 mayo). <em>  Métodos del objeto Date | Digital Learning. Digital Learning | </em>   Formación online en Nuevas Tecnologías.  <a href = "https://www.digitallearning.es/intro-programacion-js/metodos-date.html"> https://www.digitallearning.es/intro-programacion-js/metodos-date.html </a></li>
+                        <li>  C. (2020, 10 marzo). <em> Java y JavaScript ¿En que se relacionan? </em>  Globalbit. <a href =  "https://www.globalbit.co/2020/03/04/java-y-javascript-en-que-se-relacionan/">  https://www.globalbit.co/2020/03/04/java-y-javascript-en-que-se-relacionan/</a></li>
+                        <li> HACK A BOSS. (s. f.).<em>¿Qué diferencias hay entre JavaScript y Java? | </em> Hack a Boss.  <a href = "https://www.hackaboss.com/blog/diferencias-javascript-java#:%7E:text=JavaScript%20y%20Java%20son%20lenguajes%20totalmente%20diferentes.&text=Java%20es%20un%20lenguaje%20de,organizaci%C3%B3n%20sin%20%C3%A1nimo%20de%20lucro.">https://www.hackaboss.com/blog/diferencias-javascript-java#:%7E:text=JavaScript%20y%20Java%20son%20lenguajes%20totalmente%20diferentes.&text=Java%20es%20un%20lenguaje%20de,organizaci%C3%B3n%20sin%20%C3%A1nimo%20de%20lucro.</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <br>
+            <footer> Editor de html: Visual Studio Code <a href="https://code.visualstudio.com/"> Link </a> <br>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
+                    width="30"
+                    height="40">
+            </footer>
+        </div>
+        <script src="js/jscript.js"></script>
+    </body>
+
+</html>
