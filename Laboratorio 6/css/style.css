@@ -1,7 +1,4 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-@import "bulma/sass/utilities/_all.sass";
-
-
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
@@ -18,16 +15,15 @@ h2 {
 
 .Pregunta:hover  {
     font-weight: bolder;
-    color: rgb(2, 68, 22);
+    color: rgb(199, 84, 132);
 }
+
 
 p{
     color: rgb(71, 68, 69);
 }
 
-#Datos:hover {
-    font-weight: bolder;
-}
+
 
 #OtraWeb{
     border: 3px dashed rgb(247, 228, 233) ;
@@ -45,6 +41,7 @@ body {
 
 body {
     font-family: "Helvetica", "Arial", sans-serif;
+    background-color: rgb(255, 188, 176);
 }
 
 body {
@@ -53,7 +50,7 @@ body {
 }
 
 body {
-    color: rgb(19, 189, 127);
+    color: rgb(190, 72, 72);
     /* background-color: rgb(219, 196, 146); */
 }
 
@@ -93,7 +90,7 @@ header h1 {
 }
 
 footer{
-    background-color: rgb(125, 141, 128);
+    background-color: rgb(214, 81, 81);
     text-align: center;
     line-height: 50px;
     color:rgb(247, 228, 233);

@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-
     <head>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                
         <link rel="stylesheet" href="css/style.css" media="screen,projection"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
         <meta charset="utf-8" />
         <title> A01276775_Lab6 </title>
     </head>
@@ -16,9 +21,7 @@
                     <center>  Programación Orientada a Eventos</center> <br>
                 </H2>
             </header>
-
             <hr>
-
             <div id="Datos">
                 Nombre: Monserrat Karime Moreno Casas <br>
                 Edad: 20 años <br>
@@ -27,7 +30,7 @@
             </div>
             
             <hr>
-<!-- --------------------------- INSTRUCCIONES  ----------------------- -->
+<!----------------------------- INSTRUCCIONES  ----------------------- -->
 
             <div id = "Instrucciones">
                 <h3><strong><em> Instrucciones </em></strong></h3>
@@ -49,166 +52,169 @@
                     es decir la solución del problema o información respectiva a los datos introducidos. <br> <br> </p>
             </div>
 
-<!-- ---------------------------- EJERCICIOS  ----------------------- -->
+<!-- ------------------------------------------------------------------- PREGUNTAS  ------------------------------------- -->
+<div class="row" >
 
-            <div id="Ejercicios"> 
+    <div id = "Pregunta1" onclick="Mostrar_pregunta()" class="col  m5 s12 offset-s4">
+        <a class="waves-effect waves-light btn-large red lighten-3" > <i class="material-icons right"  >filter_1</i>Pregunta</a>
+    </div>
 
-                <!-- EJERCICIO 1  -->
-                <H3 align="center"><em> Ejercicio 1</em></H3>
-
-                <div class="field">
-                    <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <span class="icon is-small is-right">
-                            <i class="fas fa-check"></i>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <p class="control has-icons-left">
-                        <input class="input" type="password" placeholder="Password">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </p>
-                </div>
+    <div id = "Pregunta2"  class="col m4 s12 offset-s4">
+        <a class="waves-effect waves-light btn-large red lighten-3" > <i class="material-icons right"  >filter_2</i>Pregunta</a>
+    </div>
 
 
-                <!-- EJERCICIO 2  -->                                
-                <H3 align="center"><em> Ejercicio 2</em></H3>
-                <p align="justify"> <strong> Entrada: </strong> Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. <br> 
-                    <strong> Salida: </strong> La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.
-                </p>
-                <button id="Ejercicio 2" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
+    <div id = "Pregunta3" class="col  m2 s12  offset-s4">
+        <a class="waves-effect waves-light btn-large red lighten-3" > <i class="material-icons right"  >filter_3</i>Pregunta</a>
+    </div>
 
-                <!-- EJERCICIO 3  -->
-                <H3 align="center"><em> Ejercicio 3</em></H3>
-                <p align="justify"> <strong> Función: </strong> contador. <br> <strong> Parámetros: </strong> Un arreglo de números. <br> 
-                    <strong> Regresa: </strong> La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.
-                </p>
-                <button id="Ejercicio 3" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue" >Ver ejercicio</button>
-                <div id="contenedor_ej3"></div>
-                
-                <!-- EJERCICIO 4  -->               
-                <H3 align="center"><em> Ejercicio 4</em></H3>
-                <p align="justify"> <strong> Función: </strong>  promedios <br> <strong> Parámetros: </strong> Un arreglo de arreglos de números.  <br> 
-                    <strong> Regresa: </strong> Un arreglo con los promedios de cada uno de los renglones de la matriz.
-                </p>
-                <button id="Ejercicio 4" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
-                <div id="contenedor_ej4"></div>    
-                
-                <!-- EJERCICIO 5  -->                
-                <H3 align="center"><em> Ejercicio 5</em></H3>
-                <p align="justify"> <strong> Función: </strong>  inverso <br> <strong> Parámetros: </strong> Un número <br> 
-                    <strong> Regresa: </strong> El número con sus dígitos en orden inVer ejercicioso.
-                </p>
-                <button id="Ejercicio 5" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
-                <div id="contenedor_ej5"></div>    
+</div>
 
-                <!-- EJERCICIO 6  -->                
-                <H3 align="center"><em> Ejercicio 6</em></H3>
-                <p align="justify"> Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, 
-                    alguna problemática que hayas identificado en algún ámbito, un problema de programación que hayas resuelto en otro
-                    lenguaje,
-                    un problema de la ACM, entre otros). El problema debe estar descrito en un documento HTML, y la solución implementada en
-                    JavaScript,
-                    utilizando al menos la creación de un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra
-                    los resultados
-                    en el documento HTML.
-                </p>
+<div id = "Pregunta"> </div>
 
-                <button id="Ejercicio 6" style="background-color: rgb(150, 231, 150) ; border-color:aliceblue">Ver ejercicio</button>
-                <div id="contenedor_ej6"></div>  
+<!-- ----------------------------------------------------------------------- EJERCICIOS  ------------------------------------------------------ -->
+            <!-------------------------------------- ---------- VERIFICACIÓN DE CONTRASEÑAS ------------------------------------------- -->
+            <div id="VER_CONTRASEÑAS"> 
+                <h3><strong><center><em> VERIFICACIÓN DE CONTRASEÑAS </center></em></strong></h3>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="Usuario" type="text" class="validate">
+                                    <label for="icon_prefix">Nombre</label>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">vpn_key</i>
+                                    <input id="Contraseña1" type="password" class="validate">
+                                    <label for="Contraseña1">*******</label>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">vpn_key</i>
+                                    <input id="Contraseña2" type="password" class="validate">
+                                    <label for="Contraseña2">*******</label>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <center> <button id = "Boton_Verificar"class="btn waves-effect red lighten-3" type="submit" name="action">Verificar
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <div class="row"><div id = "Contraseña_verificada"></div>
+                    </div>
+            </div>
 
-            </div>      
+<!-------------------------------------- ---------- VENTA DE PRODUCTOS ------------------------------------------- -->
+            <div id="VENTA_PRODUCTOS"> 
+                <div class="row">
+                    <h3><strong><center><em> VENTA DE PAPITAS </center></em></strong></h3><br>
 
-            <br>
+                    <!-- -------------------- TAKIS ----------------------------- -->
+                    <div class="input-field col l3 m6 s12">
+                        <div class="card ">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="https://r.btcdn.co/r/eyJzaG9wX2lkIjo0MDY0LCJnIjoiMTAwMHgifQ/f94f9d776de57d4/667610-757528044992.jpg" >
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Takis<i
+                                        class="material-icons right">more_vert</i></span>
+                                <H5 ><del style= "color:#FF0000">$20 MXN</del> $18 MXN </H5>
+                                <select id="cantidad_takis" onchange="Guardar_cantidad()">
+                                    <option value="0" disabled selected>Cantidad</option>
+                                    <option value="0"> 0</option>
+                                    <option value="1"> 1</option>
+                                    <option value="2"> 2</option>
+                                    <option value="3"> 3</option>
+                                    <option value="4"> 4</option>
+                                    <option value="5"> 5</option>
+                                </select>
+                                <label>Cantidad de producto</label>     
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            
 
-            <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                    <!-- -------------------- CHIPS ----------------------------- -->
+                    <div class="input-field col l3 m6 s12">
+                        <div class="card ">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="https://www.soriana.com/on/demandware.static/-/Sites-soriana-grocery-master-catalog/default/dw891713c8/images/product/0757528001865_A.jpg" >
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Chips<i
+                                        class="material-icons right">more_vert</i></span>
+                                <H5 ><del style= "color:#FF0000">$19 MXN</del> $16 MXN </H5>
+                                <select id="cantidad_chips" onchange="Guardar_cantidad()">
+                                    <option value="0" disabled selected>Cantidad</option>
+                                    <option value="0"> 0</option>
+                                    <option value="1"> 1</option>
+                                    <option value="2"> 2</option>
+                                    <option value="3"> 3</option>
+                                    <option value="4"> 4</option>
+                                    <option value="5"> 5</option>
+                                </select>
+                                <label>Cantidad de producto</label>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <hr>
-
-            <div id="Preguntas">
-                <h3> <em> <center> PREGUNTAS DEL LABORATORIO </center></h3>
-                <center> <img  src = "https://cdn-icons-png.flaticon.com/512/1101/1101694.png" width = 70px height = 70px; alt = "ilustración" /> </center>
-                <article class = "Pregunta">
-                    <h3> ¿Qué diferencias y semejanzas hay entre Java y JavaScript? </h3>
-                    Diferencias:
-                    <ul>
-                        <li>Java es un lenguaje de programación orientado a objetos puros <br> JavaScript se basa en prototipos y emula la programacion ortientada objetos</li>
-                        <li>Java tiene variables definidas, JavaScript es un lenguaje mas fexible</li>
-                        <li>Java fuertemente tipado, JavaScript debilmente tipado</li>
-                        <li></li>
-                    </ul>
-                    Semejanzas 
-                    <ul>
-                        <li>Provienen de C</li>
-                        <li>Ambos trabajan POO</li>
-                    </ul>
                     
-                </article>
-
-                <article class = "Pregunta">
-                    <h3> ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*) </h3>
-                    <ul>
-                        <li><strong> getMonth() </strong> devuelve el numero del mes (inicia desde 0)</li>
-                        <li><strong> getDate() </strong> devuelve el dia del mes (inicia desde 0)</li>
-                        <li><strong> getDay() </strong> devuelve el dia de la semana (inicia desde 0)</li>
-                        <li><strong> getHours() </strong> devuelve la hora actual (inicia desde 0, formato 24hr)</li>
-                        <li><strong> getMinutes() </strong> devuelve el numero del mes (inicia desde 0)</li>
-                    </ul>
-                </article>
-
-                <article class = "Pregunta">
-                    <h3> ¿Qué métodos tienen los arreglos? (Menciona al menos 5*) </h3>
-                    <ul>
-                        <li><strong> lenght() </strong> regresa la longitud del arreglo </li>
-                        <li><strong> split() </strong> separa el arreglo por caractéres  </li>
-                        <li><strong> push() </strong> agrega un valor al arreglo </li>
-                        <li><strong> pop() </strong> elimina un valor del arreglo </li>
-                        <li><strong> sort() </strong> ordena el arreglo </li>
-                    </ul>
-                </article>
-
-                <article class = "Pregunta">
-                    <h3> ¿Cómo se declara una variable con alcance local dentro de una función? </h3>
-                    <p> Se declara con <em>let</em> </p>
-                </article>
-
-                <article class = "Pregunta">
-                    <h3> ¿Qué implicaciones tiene utilizar variables globales dentro de funciones? </h3>
-                    <p> Las variables globales son utilizadas, como su nombre lo dice, de manera global, es decir no existe ningun momento 
-                        de muerte para estas, pueden ser utilizadas en cualquier parte del código </p>
-                </article>
-
-            </div>
-            <hr>
-
-                <div id = "Referencias" >
-                    <h1> Referencias: </h1>
-                    <ul>
-                        <li> Moreno, C. (2020, 15 enero). <em>  Funciones sobre arreglos que debes conocer en Javascript.  </em> Medium. <a href = "https://medium.com/@khriztianmoreno/funciones-sobre-arreglos-que-debes-conocer-en-javascript-bae9d9ff8e52"> https://medium.com/@khriztianmoreno/funciones-sobre-arreglos-que-debes-conocer-en-javascript-bae9d9ff8e52 </a></li>
-                        <li> Digital Learning. (2017, 12 mayo). <em>  Métodos del objeto Date | Digital Learning. Digital Learning | </em>   Formación online en Nuevas Tecnologías.  <a href = "https://www.digitallearning.es/intro-programacion-js/metodos-date.html"> https://www.digitallearning.es/intro-programacion-js/metodos-date.html </a></li>
-                        <li>  C. (2020, 10 marzo). <em> Java y JavaScript ¿En que se relacionan? </em>  Globalbit. <a href =  "https://www.globalbit.co/2020/03/04/java-y-javascript-en-que-se-relacionan/">  https://www.globalbit.co/2020/03/04/java-y-javascript-en-que-se-relacionan/</a></li>
-                        <li> HACK A BOSS. (s. f.).<em>¿Qué diferencias hay entre JavaScript y Java? | </em> Hack a Boss.  <a href = "https://www.hackaboss.com/blog/diferencias-javascript-java#:%7E:text=JavaScript%20y%20Java%20son%20lenguajes%20totalmente%20diferentes.&text=Java%20es%20un%20lenguaje%20de,organizaci%C3%B3n%20sin%20%C3%A1nimo%20de%20lucro.">https://www.hackaboss.com/blog/diferencias-javascript-java#:%7E:text=JavaScript%20y%20Java%20son%20lenguajes%20totalmente%20diferentes.&text=Java%20es%20un%20lenguaje%20de,organizaci%C3%B3n%20sin%20%C3%A1nimo%20de%20lucro.</a></li>
-                    </ul>
+                    <!-- ------------------- DORITOS ----------------------------- -->
+                    <div class="input-field col l3 m6 s12">
+                        <div class="card ">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="https://www.movil.farmaciasguadalajara.com/wcsstore/FGCAS/wcs/products/1080989_S_1280_F.jpg" >
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Doritos<i
+                                        class="material-icons right">more_vert</i></span>
+                                <H5 ><del style= "color:#FF0000">$21 MXN</del> $17 MXN </H5>
+                                <select id="cantidad_doritos" onchange="Guardar_cantidad()">
+                                    <option value="0" disabled selected>Cantidad</option>
+                                    <option value="0"> 0</option>
+                                    <option value="1"> 1</option>
+                                    <option value="2"> 2</option>
+                                    <option value="3"> 3</option>
+                                    <option value="4"> 4</option>
+                                    <option value="5"> 5</option>
+                                </select>
+                                <label>Cantidad de producto</label>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
+                <center> <button id = "Boton_Compra"class="btn waves-effect red lighten-3" type="submit" name="action">Comprar
+                </button> <br><br>
 
-            <br>
-            <footer> Editor de html: Visual Studio Code <a href="https://code.visualstudio.com/"> Link </a> <br>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"
-                    width="30"
-                    height="40">
-            </footer>
-        </div>
+                <div id = "compra"></div>
+                <div id = "precio"></div>
+                
+            </div>              
+
+
+
+        <footer> Editor de html: Visual Studio Code <a href="https://code.visualstudio.com/"> Link </a> <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="30" height="40">
+        </footer>
+
         <script src="js/jscript.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
 
 </html>

@@ -1,231 +1,128 @@
-const boton1 = document.getElementById("Ejercicio 1");
-const boton2 = document.getElementById("Ejercicio 2");
-const boton3 = document.getElementById("Ejercicio 3");
-const boton4 = document.getElementById("Ejercicio 4");
-const boton5 = document.getElementById("Ejercicio 5");
-const boton6 = document.getElementById("Ejercicio 6");
+//-------------------------------------- PREGUNTAS -------------------------------------------------------------
 
-//Botones 
-boton1.onclick = () => {
-    console.log("Click! Boton 1");
-    const numero = prompt("Ingrese un número");
-    document.getElementById("contenedor_ej1").innerHTML = tabla_cuadrados_cubos(numero);
-} 
-
-boton2.onclick = () => {
-    console.log("Click! Boton 2");
-    suma_aleatoria();
-} 
-
-boton3.onclick = () => {
-    console.log("Click! Boton 3");
-    document.getElementById("contenedor_ej3").innerHTML = contador();
-} 
-
-boton4.onclick = () => {
-    console.log("Click! Boton 4");
-    document.getElementById("contenedor_ej4").innerHTML = promedios();
-} 
-
-
-boton5.onclick = () => {
-    console.log("Click! Boton 5");
-    document.getElementById("contenedor_ej5").innerHTML = inverso();
-} 
-
-boton6.onclick = () => {
-    console.log("Click! Boton 6");
-                const figuras = [];
-            
-            
-                figuras[0] = new CFigura(); 
-                figuras[1] = new CCuadrado(10);
-                figuras[2] = new CTriangulo(18,3);
-                figuras[3] = new CCirculo(8);
-
-                let figuras_txt = '<br> <strong> <em> FIGURAS DEL EJERCICIO </strong> <br> <br> <strong> Figura desconocida:  </strong> ?u <br> <strong> Cuadrado: </strong> 10u <br> <strong> Triángulo: </strong> 18u , 3u  <br> <strong> Circulo: </strong> 8u<br>';
-                figuras_txt += '<br> <br> <strong> <em> ÁREAS DE LAS FIGURAS </strong> <br> <br>'
-                document.getElementById("contenedor_ej6").innerHTML += figuras_txt 
-                for (let i = 0; i < 4; i++) {
-                   // alert("Figura" + i)
-                document.getElementById("contenedor_ej6").innerHTML +=  figuras[i].calculoArea();
-                }
-
-
-} 
-
-
-
-
-// Ejercicio 1 -> 
-
-function tabla_cuadrados_cubos(numero) {
-    let resultado = '<table border = "2" style="border-color: rgb(35, 167, 68)" ; align="center"> '; //Creación de la tabla con borde 1 
-    resultado += " <br> <tr> <td> Numero </td>" + "<td> Cuadrado </td>" + "<td> Cubo </td> </tr>"; // Creación de los encabezados de la tabla
-    for (let i = 1; i <= numero; i++) {
-        resultado += "<tr>";
-        resultado += "<td>" + i + "</td>" + "<td>" + i*i + "</td>" + "<td>" + i*i*i + "</td>"; // Creación de números 
-        resultado += "</tr>"
-    }
-    resultado += "</table>"; // Cerrar tabla
-    return resultado; //Regresar resultado
+function Mostrar_pregunta() {
+    let div_pregunta = document.getElementById("Pregunta");
+    let pregunta = "<h5>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </h5> <br>";
+    let respuesta = "Porque en caso de que se requiera realizar un input con los datos insertados por usuario y este cometa algun error se le pueda comunicar de manera inmediata en vez de esperar alguna respuesta del servidor";
+    respuesta += "<br><br><br>"
+    div_pregunta.innerHTML = pregunta + respuesta;
+    document.getElementById("Pregunta1").onclick = Vaciar_pregunta;
 }
 
-// Ejercicio 2 ->
+document.getElementById("Pregunta2").onclick = () => {
+    let div_pregunta = document.getElementById("Pregunta");
+    let pregunta = "<h5>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript? </h5> <br>";
+    let respuesta = "Simplemente introduciendo un par de palabras reservadas en el código HTML utilizando la consola del desarrollador deL navegador. Igualmente basta con deshabilitar el javascript en el navegador o hacer directamente el form.submit";
+    respuesta += "<br><br><br>"
+    div_pregunta.innerHTML = pregunta + respuesta;
 
-function suma_aleatoria(){
-    let numero1 = Math.floor(Math.random() * 10) + 1;
-    let numero2 = Math.floor(Math.random() * 10) + 1;
-    let resultado = numero1 + numero2;
+}
 
-    let tiempo_inicial = Date.now(); //Empieza a tomar el tiempo
-    const respuesta = prompt ("Digite el resultado de la siguiente suma: " + numero1 +" + " + numero2);
-    let tiempo_final = Date.now(); //Finaliza la toma de tiempo
+document.getElementById("Pregunta3").onclick = () => {
+    let div_pregunta = document.getElementById("Pregunta");
+    let pregunta = "<h5>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</h5> <br>";
+    let respuesta = "Es buena practica porque como ya se menciono tiene la utilidad de notificarle al usuario si existe algun error en los datos de manera inmediata. Pero también es buena práctica utilizar algoritmos de encriptacion para evitar que cualquier usuario tenga acceso a la informacion  de las variables.";
+    respuesta += "<br><br><br>"
 
-    let tiempo_respuesta = (tiempo_final - tiempo_inicial) / 1000;
-    
+    div_pregunta.innerHTML = pregunta + respuesta;
+}
 
-    //Imprime resultados
-    if (resultado == respuesta){
-        alert('El resultado de su respuesta es CORRECTO!! \nSu tiempo de respuesta fue: ' + tiempo_respuesta);
+
+//-------------------------------------- VERIFICACIÓN DE CONTRASEÑAS -------------------------------------------
+
+const BotonVerificar = document.getElementById("Boton_Verificar");
+
+BotonVerificar.onclick  = () => {
+    console.log("Click! Verificar!")
+    verificar_password();
+}
+
+function verificar_password() {
+    let verificacion = document.getElementById('Contraseña_verificada');
+    const _Usuario = document.getElementById('Usuario').value; 
+    const _Contraseña1 = document.getElementById('Contraseña1').value; 
+    const _Contraseña2 = document.getElementById('Contraseña2').value; 
+
+    if (_Contraseña1 == _Contraseña2 && _Contraseña1 != "" &&  _Usuario != ""){
+        verificacion.innerHTML = '<br>  <div class="col s9 m3"> <div class="card-panel teal lighten-4"> <span> Hola! ' +  _Usuario  + '<br> Contraseña correctamente verificada!!</span></div></div>'
+    }
+
+    else if (_Contraseña1 != _Contraseña2 && _Contraseña1 != ""  &&  _Usuario != ""){
+        verificacion.innerHTML = ' <br> <div class="col s9 m3"> <div class="card-panel red lighten-3"> <span> Hola! ' +  _Usuario  + '<br> Las contraseñas no son iguales!! :(</span></div></div>'
+        
     }
 
     else{
-        alert('El resultado de su respuesta es INCORRECTO!! \nSu tiempo de respuesta fue: ' + tiempo_respuesta);
+        verificacion.innerHTML = '<br>  <div class="col s9 m3"> <div class="card-panel blue lighten-4"> <span> Por favor, rellene todos los datos</span></div></div>'
     }
 
 }
 
-//Ejercicio 3 ->
+//-------------------------------------- VENTA DE PRODUCTOS  -------------------------------------------
 
-function contador(){
-    let Array = [-18, -8, 12, 16, 5, -22, 0, 15, 22, -0, 7, 8, 45 ];
-    let Arreglo = '<br> <strong> El arreglo es: </strong>' + Array + '<br>';
+//Variables 
+var cantidad_Takis = 0;
+var cantidad_Chips = 0;
+var cantidad_Doritos = 0;
 
-     //Variables de la función
-    let negativos = 0;
-    let ceros = 0;
-    let mayor_cero = 0;
+//Precios
+
+var precio_Takis = 18;
+var precio_Chips = 16;
+var precio_Doritos = 17;
 
 
-    for (let i = 0; i <= Array.length; i++) { //For que se repite dependiendo la medida del array 
-        if (Array[i] < 0) {
-            negativos++; // Sumador de numeros negativos 
-        }
-        else if (Array[i]  == 0) {
-            ceros++; // Sumador de numeros con ceros 
-        }
-        else if (Array[i] > 0) {
-            mayor_cero++; // Sumador de numeros mayores a cero 
-        }
-    }
+var iva = .07;
 
-    //Impresión 
-    Arreglo += '<strong> La cantidad de números negativos es: </strong>  ' + negativos + '<br> <strong> \nLa cantidad de 0s es: </strong>' + ceros + '<br> <strong> \nLa cantidad de números mayores a cero es: </strong>' + mayor_cero;
-    return Arreglo;
-    console.log(Arreglo)
+const BotonComprar = document.getElementById("Boton_Compra");
 
+BotonComprar.onclick  = () => {
+    console.log("Click! Comprar!")
+    Calcular_precio();
 }
 
-// Ejercicio 4 -> 
-function promedios(){
-    let arrays = [[11,12,13,14],[15,16,17,18],[19,20,21,22]];
-    let promedio = 0;
-    let promedio_array = new Array; 
 
-    let respuesta = '<br> <strong> Su matriz es: </strong>  <br>'; 
-    for (let i = 0; i < arrays.length; i++){ //Ciclo for para mostrar la matriz con formato
-        respuesta += arrays[i] + '<br>';
-        
-    }
+function Guardar_cantidad(){
+    cantidad_Takis = document.getElementById("cantidad_takis").value;
+   // console.log("cantidad takis: " + cantidad_Takis);
+}
+
+document.getElementById("cantidad_chips").onchange = () => {
+    cantidad_Chips = document.getElementById("cantidad_chips").value;
+    //console.log("cantidad chips: " + cantidad_Chips);
+}
+
+
+document.getElementById("cantidad_doritos").onchange = () => {
+    cantidad_Doritos = document.getElementById("cantidad_doritos").value;
+    //console.log("cantidad doritos: " + cantidad_Doritos);
+}
+
+function Calcular_precio(){
     
+    console.log("cantidad takis: " + cantidad_Takis);
+    console.log("cantidad chips: " + cantidad_Chips);
+    console.log("cantidad doritos: " + cantidad_Doritos);
 
-    for (let i = 0; i < arrays.length; i++) {
-        let suma = 0;
-        let contador = 0;
+    let precio_producto = (cantidad_Takis * precio_Takis) + (cantidad_Chips * precio_Chips) + (cantidad_Doritos * precio_Doritos);
+    let precio_total = precio_producto + (precio_producto * iva);
+    console.log(precio_producto);
+    console.log(precio_total);
 
-        for (let j = 0; j < arrays[i].length; j++) { //Recorrido matriz
-            suma += arrays[i][j];
-        }
-
-        promedio = suma/arrays.length;
-        promedio_array.push("  " + promedio.toFixed(1)); // Formato de un decimal al promedio 
-    }
-
-    respuesta += '<br> <strong> El promedio de cada renglón es: </strong>' + promedio_array;
-
-
-    return respuesta; 
-}
-
-//Ejercicio 5 ->
-
-function inverso(){
-    let numero = prompt ("Ejercicio 5: Digite un número para obtener sus digitos en orden inverso");
-    let rango = numero;
-    let inverso = [];
-    for (let i = 0; i <= rango; i++) {
-        inverso[i] = numero--;
-    }
-
-    let respuesta = '<br> <strong>Los números inversos son: </strong>' + inverso;
-    return respuesta;
-}
-
-//Ejercicio 6
-
-class CFigura{
-    constructor(){
-    }
-
-    calculoArea(){
-        let respuesta = "<strong> No sé qué figura es :( </strong>"
-        return respuesta;
-    }
+    let div_pregunta = document.getElementById ("precio");
+    div_pregunta.innerHTML =  "<h4> El total de su compra es: $" + precio_total + " MXN</h4> <br>" ;
+    Mostrar_compra();
 
 }
 
 
-class CCirculo{
 
-    constructor(r){
-        this.radio = r;
-    }
 
-    calculoArea(){
-        let calculo_area = (Math.PI *(Math.pow(this.radio, 2))).toFixed(2);
-        
-        let respuesta ="<br> <strong> El radio del circulo es: </strong> " + this.radio + "u" + "<br> <strong> \nEl área del circulo es: </strong> " + calculo_area  + "u^2";
-        return respuesta;
-    }
 
-}
+function Mostrar_compra(){
 
-class CCuadrado{
+    let div_compra = document.getElementById ("compra");
+    div_compra.innerHTML = "<br> <h5> " + cantidad_Takis + " x" + " Takis  </h5> <br>" + "<h5> " + cantidad_Chips + " x" + " Chips </h5>  <br>" + "<h5> " + cantidad_Doritos + " x" + " Doritos </h5>  <br>" ;
 
-    constructor (l){
-        this.lado = l;
-    }
-
-    calculoArea(){
-        let calculo_area = (this.lado * this.lado).toFixed(2);
-        let respuesta = "<br> <strong> El lado del cuadrado mide:  </strong> " + this.lado + "u" + "<br> <strong> \nEl área del cuadrado es: </strong>  " + calculo_area + "u^2";
-        return respuesta;
-    }
-
-}
-
-class CTriangulo{
-
-    constructor (a, b){
-        this.base = b;
-        this.altura = a;
-    }
-
-    calculoArea(){
-        let calculo_area = (this.base * this.altura).toFixed(2);
-        let respuesta ="<br> <strong> La base del triángulo es es: </strong>  " + this.base + "u" +  " <br> <strong> \nLa altura del triángulo es: </strong>  " + this.altura + "<br> <strong> \n El área del triangulo es: </strong>  " + calculo_area + "u^2" ;
-        return respuesta;
-    }
-
+    
 }

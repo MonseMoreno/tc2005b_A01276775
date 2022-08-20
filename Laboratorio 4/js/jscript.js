@@ -1,10 +1,4 @@
 const boton1 = document.getElementById("Ejercicio 1");
-const boton2 = document.getElementById("Ejercicio 2");
-const boton3 = document.getElementById("Ejercicio 3");
-const boton4 = document.getElementById("Ejercicio 4");
-const boton5 = document.getElementById("Ejercicio 5");
-const boton6 = document.getElementById("Ejercicio 6");
-
 //Botones 
 boton1.onclick = () => {
     console.log("Click! Boton 1");
@@ -12,27 +6,31 @@ boton1.onclick = () => {
     document.getElementById("contenedor_ej1").innerHTML = tabla_cuadrados_cubos(numero);
 } 
 
+const boton2 = document.getElementById("Ejercicio 2");
 boton2.onclick = () => {
     console.log("Click! Boton 2");
     suma_aleatoria();
 } 
 
+const boton3 = document.getElementById("Ejercicio 3");
 boton3.onclick = () => {
     console.log("Click! Boton 3");
     document.getElementById("contenedor_ej3").innerHTML = contador();
 } 
 
+const boton4 = document.getElementById("Ejercicio 4");
 boton4.onclick = () => {
     console.log("Click! Boton 4");
     document.getElementById("contenedor_ej4").innerHTML = promedios();
 } 
 
-
+const boton5 = document.getElementById("Ejercicio 5");
 boton5.onclick = () => {
     console.log("Click! Boton 5");
     document.getElementById("contenedor_ej5").innerHTML = inverso();
 } 
 
+const boton6 = document.getElementById("Ejercicio 6");
 boton6.onclick = () => {
     console.log("Click! Boton 6");
                 const figuras = [];
