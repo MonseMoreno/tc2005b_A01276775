@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 
@@ -9,12 +8,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 //RUTAS
 const rutas_principal = require('./routes/principal.routes');
-const rutas_animalitos = require('./routes/animalitos.routes');
 const rutas_mascota = require('./routes/mascota.routes');
+const rutas_animalitos = require('./routes/animalitos.routes');
 
-app.use('/favoritos', rutas_favoritos);
+app.use('/Principal', rutas_principal);
+app.use('/Mascota', rutas_mascota);
 app.use('/animalitos', rutas_animalitos);
-app.use('/mascota', rutas_mascota);
 
 
 // app.use((request, response, next) => {
