@@ -1,0 +1,34 @@
+<%- include('includes/head.ejs') %>
+
+<!-- VIDEOJUEGOS  -->
+<body>
+
+    <H3 align="center"><em> Mis videojuegos favoritos </em></H3>
+
+    <% for (let videojuego of videojuegos) { %>
+        <li class = "list-group-item "><%= videojuego.nombre %></li>
+    <%} %>
+
+    <br>
+
+    <a href="juegos/nuevoVideojuego"><button class="button is-danger is-light">Añadir otro</button></a>
+
+<!-- PERSONAJES  -->
+        <H3 align="center"><em> Mis personajes favoritos </em></H3>
+        
+        <% for (let personaje of personajes) { %>
+            <li class = "list-group-item "><%= personaje.nombre %></li>
+        <%} %>
+    
+        <br>
+    
+        <a href="juegos/nuevoPersonaje"><button class="button is-danger is-light">Añadir otro</button></a>
+    <br><br><br>
+    <a href="/"><button class="button is-danger is-light">Volver a la página incial</button></a>
+
+    <br><br>
+    </div>
+    </body>
+
+    
+<%- include('includes/foot.ejs') %>
