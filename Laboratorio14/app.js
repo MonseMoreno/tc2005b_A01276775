@@ -51,9 +51,4 @@ app.use((request, response, next) => {
 });
 
 
-app.use((request, response, next) => {
-    console.log('Otro middleware!');
-    response.send('Aquí no hay nada'); //Manda la respuesta
-});
-
 app.listen(3000);
