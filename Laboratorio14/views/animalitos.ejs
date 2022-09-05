@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+
+
+    <H3 align="center"><em> Mis animalitos favoritos </em></H3>
+
+    <% for (let animal of animalitos) { %>
+        <li class = "list-group-item "><%= animal.nombre %></li>
+    <%} %>
+
+    <br>
+
+    <a href="/"><button class="button is-danger is-light">Volver a la página incial</button></a>
+    
+    </body>
+
+<%- include('includes/foot.ejs') %>
