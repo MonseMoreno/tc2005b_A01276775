@@ -7,6 +7,7 @@ const session = require('express-session');
 const rutas_juegos = require('./routes/juegos.routes');
 const rutas_mascota = require('./routes/mascota.routes');
 const rutas_animalitos = require('./routes/animalitos.routes');
+const rutas_users = require('./routes/user.routes');
 const rutas_principal = require('./routes/principal.routes');
 const path = require('path');
 
@@ -27,6 +28,9 @@ app.use(session({
     saveUninitialized: false, 
 }));
 
+
+//Para login
+app.use('/users', rutas_users);
 //Para videojuegos
 app.use('/juegos', rutas_juegos);
 //Para mascota
