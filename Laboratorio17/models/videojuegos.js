@@ -38,7 +38,6 @@ module.exports = class CVideojuegos{
         return db.execute('SELECT * FROM videojuegos WHERE idVideojuego=?', [idVideojuego]);
     }
 
-    //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAllVideojuegos() {
        console.log(db.execute('SELECT * FROM videojuegos'));
         return db.execute('SELECT * FROM videojuegos');

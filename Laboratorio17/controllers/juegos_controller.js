@@ -7,10 +7,14 @@ const Personajes = require('../models/personajes');
 
 // PERSONAJES
 exports.get_nuevo_personaje = (request, response, next) => {
-    console.log('GET /juegos/nuevoPersonaje');
-    response.render('nuevoPersonaje', {
-        username: request.session.username ? request.session.username : ''
-    }); 
+    Videojuegos.fetchAllVideojuegos()
+    .then(([rows, fieldData]) => {
+        response.render('nuevoJuego', {
+            videojuegos: rows,
+            username: request.session.username ? request.session.username : '',
+        })
+    })
+    .catch(err => console.log(err));
 };
 
 exports.post_nuevo_personaje = (request, response, next) => {
