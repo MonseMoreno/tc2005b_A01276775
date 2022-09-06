@@ -35,5 +35,4 @@ module.exports = class CPersonajes{
         console.log(db.execute('SELECT * FROM personajes'));
          return db.execute('SELECT * FROM personajes');
     }
-
 }
