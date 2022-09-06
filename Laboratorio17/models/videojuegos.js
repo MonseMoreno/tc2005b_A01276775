@@ -35,14 +35,14 @@ module.exports = class CVideojuegos{
         );
     }
 
-    static fetchOnePeli(idVideojuego) {
-        return db.execute('SELECT * FROM videojuegos WHERE idPelicula=?', [idPelicula]);
+    static fetchOneJuego(idVideojuego) {
+        return db.execute('SELECT * FROM videojuegos WHERE idVideojuego=?', [idVideojuego]);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
-    static fetchAllPeliculas() {
-       console.log(db.execute('SELECT * FROM peliculas'));
-        return db.execute('SELECT * FROM peliculas');
+    static fetchAllVideojuegos() {
+       console.log(db.execute('SELECT * FROM videojuegos'));
+        return db.execute('SELECT * FROM videojuegos');
     }
 
 }
