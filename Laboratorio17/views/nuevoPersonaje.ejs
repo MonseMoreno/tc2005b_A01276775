@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+
+    <h1 id="principal">
+        <FONT COLOR="purple">
+            <center>NUEVO PERSONAJE FAVORITO!!! </center>
+    </h1>
+    <center>
+    <h4>Ingresar nuevo personaje...</h4> <br><br>
+    <form action="/juegos/nuevoPersonaje" method="POST">
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Sova" ><br><br>
+        <label for="nombre">Descripcion: </label> <br>
+        <textarea rows = "5" cols = "60" id = "descripcion" name = "descripcion" placeholder="Le gustan las moras"></textarea><br>
+        <br><br>
+        <label for="nombre">Imagen: </label> <br>
+        <textarea rows = "2" cols = "60" id = "imagen" name = "imagen" placeholder="https://es.web.img3.acsta.net/medias/nmedia/18/86/91/41/19870073.jpg"></textarea><br>
+        <br><br>
+        
+
+        <a href="/juegos"><input type="submit" value="Enviar"></a>'
+    </form>
+    <br><br>
+    <a href="/juegos"> <button class="button is-danger is-light">Pagina Inicial</button></a>
+    </div>
+    </center>
+
+
+<body>
+
+
+<%- include('includes/foot.ejs') %>

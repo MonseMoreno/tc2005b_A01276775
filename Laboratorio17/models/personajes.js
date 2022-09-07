@@ -1,17 +1,5 @@
 
-const db = require('../../util/database');
-//fs: filesystem
-// const fs = require('fs');
-
-// var personajes = [];
-
-// //Para leer los personajes
-// fs.readFile('./tops/personajes.json', (err, data) => {
-//     if (err) throw err;
-//     personajes = JSON.parse(data);
-//     console.log(personajes)
-
-// });
+const db = require('../util/database');
 
 module.exports = class CPersonajes{
 
@@ -31,7 +19,7 @@ module.exports = class CPersonajes{
 
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
-    static fetchAllPersonajes() {
+    static fetchAllCPersonajes() {
         console.log(db.execute('SELECT * FROM personajes'));
          return db.execute('SELECT * FROM personajes');
     }

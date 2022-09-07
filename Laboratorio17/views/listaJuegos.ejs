@@ -1,0 +1,89 @@
+<%- include('includes/head.ejs') %>
+
+<!-- VIDEOJUEGOS  -->
+<body>
+
+    <H3 align="center"><em> Mis videojuegos favoritos </em></H3> <br><br>
+
+
+    <div class="row">
+            <% for (let videojuego of videojuegos) { %>
+                <div class="card" style="max-width: 350px;">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="<%- videojuego.imagen %>" class="img-fluid rounded-start" alt="...">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4"><%= videojuego.nombre %></p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            <%= videojuego.descripcion %>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            <%} %> 
+        </div>
+
+    <% if (ultimo_videojuego != '') { %>
+        <p><b>El ultimo videojuego agregado fue: <%= ultimo_videojuego %></b></p>
+    <% } %>  
+    
+    <br>
+    <br>
+    <a href="juegos/nuevoVideojuego"><button class="button is-danger is-light">Añadir otro</button></a>
+
+<!-- PERSONAJES  -->
+        <H3 align="center"><em> Mis personajes favoritos </em></H3><br><br>
+    
+    <div class="row">   
+        <% for (let personaje of personajes) { %>
+                <div class="card" style="max-width: 350px;">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="<%- personaje.imagen %>" class="img-fluid rounded-start" alt="...">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4"><%= personaje.nombre %></p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            <%= personaje.descripcion %>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            <%} %> 
+    
+        <br>
+    </div>
+
+        <% if (ultimo_personaje != '') { %>
+            <p><b>El ultimo personaje agregado fue: <%= ultimo_personaje %></b></p>
+        <% } %>  
+    
+        <br><br><br>
+        <a href="juegos/nuevoPersonaje"><button class="button is-danger is-light">Añadir otro</button></a>
+    <br><br><br>
+
+
+    <center><a href="/users/principal"><button class="button is-danger is-light">Volver a la página incial</button></a> </center>
+
+    <br><br>
+    </div>
+    </body>
+
+    
+<%- include('includes/foot.ejs') %>

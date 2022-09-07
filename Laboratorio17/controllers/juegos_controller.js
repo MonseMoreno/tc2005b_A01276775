@@ -7,39 +7,30 @@ const Personajes = require('../models/personajes');
 
 // PERSONAJES
 exports.get_nuevo_personaje = (request, response, next) => {
-    Videojuegos.fetchAllVideojuegos()
+    Personajes.fetchAllCPersonajes()
     .then(([rows, fieldData]) => {
-        response.render('nuevoJuego', {
-            videojuegos: rows,
+        response.render('nuevoPersonaje', {
+            personajes: rows,
             username: request.session.username ? request.session.username : '',
         })
     })
     .catch(err => console.log(err));
 };
 
-exports.post_nuevo_personaje = (request, response, next) => {
-    console.log('POST /juegos/nuevoPersonaje');
-    console.log(request.body);
-    let personaje = new Personajes(request.body.nombre);
-    personaje.save();
-    response.setHeader('Set-Cookie', 'ultimo_personaje ='+personaje.nombre+'; HttpOnly', 'utf8');
-    response.redirect('/juegos');
+exports.post_nuevo_personaje = (request, response, next) => {    
+    const persona = new Personajes(request.body.nombre, request.body.descripcion,request.body.imagen);
+    persona.save().then(() => {
+        response.setHeader('Set-Cookie', 'ultimo_personaje='+ persona.nombre +'; HttpOnly', 'utf8');
+        response.render('index')
+    }).catch(err => console.log(err));
+    
 };
 
-
-//VIDEOJUEGOS 
-// exports.get_nuevo_videojuego = (request, response, next) => {
-//     console.log('GET /juegos/nuevoVideojuego');
-//     response.render('nuevoVideojuego', {
-//         username: request.session.username ? request.session.username : ''
-//     }); 
-// };
-
-// PERSONAJES
+// Videojuegos
 exports.get_nuevo_videojuego = (request, response, next) => {
     Videojuegos.fetchAllVideojuegos()
     .then(([rows, fieldData]) => {
-        response.render('nuevoJuego', {
+        response.render('nuevoVideojuego', {
             videojuegos: rows,
             username: request.session.username ? request.session.username : '',
         })
@@ -50,20 +41,33 @@ exports.get_nuevo_videojuego = (request, response, next) => {
 exports.post_nuevo_videojuego = (request, response, next) => {
     console.log('POST /juegos/nuevoVideojuego');
     console.log(request.body);
-    let juego = new Videojuegos(request.body.nombre);
-    juego.save();
-    response.setHeader('Set-Cookie', 'ultimo_videojuego='+juego.nombre+'; HttpOnly','utf8');
-    response.redirect('/juegos');
+    const juego = new Videojuegos(request.body.nombre, request.body.descripcion,request.body.imagen);
+    juego.save().then(() => {
+        response.setHeader('Set-Cookie', 'ultimo_videojuego ='+ juego.nombre +'; HttpOnly', 'utf8');
+        response.render('index')
+    }).catch(err => console.log(err));
 };
 
 
-
 exports.principal = (request, response, next) => {
-    console.log('Ruta principal');
-    response.render('listaJuegos', {personajes: Personajes.fetchAllCPersonajes(), videojuegos: Videojuegos.fetchAllCVideojuegos(), 
-        username: request.session.username ? request.session.username : '',
-        ultimo_videojuego: request.cookies.ultimo_videojuego ? request.cookies.ultimo_videojuego : '',
-        ultimo_personaje: request.cookies.ultimo_personaje ? request.cookies.ultimo_personaje : ''
-    })
+    Videojuegos.fetchAllVideojuegos()
+    .then(([videojuegos, fieldData]) => {
+        Personajes.fetchAllCPersonajes()
+        .then(([personajes,fieldData]) =>{
+                response.render('listaJuegos', {
+                    videojuegos: videojuegos,
+                    personajes:personajes,
+                    username: request.session.username ? request.session.username : '',
+                    ultimo_videojuego: request.cookies.ultimo_videojuego ? request.cookies.ultimo_videojuego : '',
+                    ultimo_personaje: request.cookies.ultimo_personaje ? request.cookies.ultimo_personaje : ''
+                })
+            }).catch(error => {
+                console.log(error);
+            });
+        }).catch(error =>{
+            console.log(error);
+        });       
 }
+
+
 

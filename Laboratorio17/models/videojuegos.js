@@ -1,17 +1,6 @@
-const db = require('../../util/database');
 
-// //fs: filesystem
-// const fs = require('fs');
 
-// var videojuegos = [];
-
-// //Para leer las películas
-// fs.readFile('./tops/videojuegos.json', (err, data) => {
-//     if (err) throw err;
-//     videojuegos = JSON.parse(data);
-//     console.log(videojuegos)
-
-// });
+const db = require('../util/database');
 
 module.exports = class CVideojuegos{
 
@@ -29,7 +18,7 @@ module.exports = class CVideojuegos{
     );
     }
 
-    getPelicula(){
+    getVideojuego(){
         return db.execute('Select *  FROM videojuegos WHERE idVideojuego = (?)',[this.id]
         );
     }

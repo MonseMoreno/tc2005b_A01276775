@@ -1,0 +1,112 @@
+<%- include('includes/head.ejs') %>
+
+
+<div id="Sobre mi">
+  <H3 align="center"><em> Conóceme </em></H3>
+  <div class="card">
+      <div class="card-content">
+          <div class="media">
+          <div class="media-left">
+              <figure class="image is-48x48">
+              <img src="\Imagenes\yo.jpg" alt="Imagen Monse">
+              </figure>
+          </div>
+          <div class="media-content">
+              <p class="title is-4">Monserrat Moreno</p>
+              <p class="subtitle is-6">@MonseCa</p>
+          </div>
+          </div>
+      
+          <div class="content">
+                  <p align="justify"> Hola mi nombre es <strong> Monserrat Karime Moreno Casas </strong> una estudiante de ITC en el
+                      Tecnológico de Monterrey campus Querétaro
+                      me considero una persona reservada, incluso tímida, pero también soy una persona graciosa, comprometida,
+                      comprensiva, tolerante y responsable.
+
+                      Mi comida favorita es la milanesa y la barbacoa, mi animal favorito es el lobo, mis pasatiempos
+                      actualmente son escribir, jugar videojuegos (mi favorito actualmente es Valorant),
+                      también me gusta mucho la ilustración digital donde he trabajado para la creación de emotes o banners
+                      para creadores de contenidos pequeños y actualmente
+                      actualmente los softwares que sé utilizar son <a href=https://www.systemax.jp/en/sai />Paint Tool
+                      Sai</a> y <a href=https://procreate.art>Procreate</a>.
+                  </p>
+              <br>
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          </div>
+      </div>
+  </div>
+  <br>
+
+  
+  <H3 align="center"><em> Mis videojuegos favoritos </em></H3>
+
+  <div class="container ">
+    <center>
+      <figure class="image is-100x100">
+        <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltb0b01757f957fe46/62fedc49a0f2201007b503b9/08232022-Agent-Reyna_Killjoy-banner.jpg?auto=webp&disable=upscale&width=895" alt="Imagen Monse">
+        </figure>
+        <a href="/juegos"><button class="button is-danger is-light">Descubrir videojuegos</button></a>
+    </center>
+  </div>
+
+      </div><br><br>
+      <hr>
+  
+  
+      <div class="container ">
+        <center>
+          <a href="/mascota"><button class="button is-danger is-light"> Conoce mi mascota</button></a>
+          <a href="/animalitos"><button class="button is-danger is-light"> Conoce mis animalitos favoritos</button></a>
+        </center>
+      </div>
+  
+  
+      <br>
+      <hr>
+  
+      <br>
+
+
+
+<!-- Preguntas a responder -->
+<br>
+<H3 align="center"><em>Preguntas a responder </em></H3>
+<br>
+
+<article class="message is-danger">
+  <div class="message-header">
+    <p>  ¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+    Facilita agregar nuevos metodos de consultas en sql, no hay necesidad de moficar nada mas, ya que en la capa del modelo es donde se tienen todos los datos.
+  </div>
+</article>
+
+
+<article class="message is-danger">
+  <div class="message-header">
+    La inyección de SQL es un tipo de ciberataque encubierto en el cual un hacker inserta código propio en un sitio web con el fin de quebrantar las medidas de seguridad y acceder a datos protegidos. Una vez dentro, puede controlar la base de datos del sitio web y secuestrar la información de los usuarios. <br><br>
+    
+    <button class="delete" aria-label="delete"></button>
+  </div>
+  <div class="message-body">
+    <b>¿Cómo evitar el SQL injection?</b>
+    <ul>
+      <li>Convierte siempre el valor a su tipo correspondiente</li>
+      <li>Parametrizar las consultas SQL</li>
+      <li>Usar una cuenta con permisos restringidos a la base de datos</li>
+      <li>No mostrar al usuario la información de error generada por la base de datos</li>
+      <li>Rechazar las peticiones con caractéres sospechosos</li>
+    </ul>
+  </div>
+</article>
+
+
+</div>
+</div>
+<br><br>
+</body>
+
+
+<%- include('includes/foot.ejs') %>
