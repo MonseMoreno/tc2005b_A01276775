@@ -1,0 +1,41 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+
+
+    <H3 align="center"><em> Mis animalitos favoritos </em></H3> <br><br><br>
+
+    
+        <div class="row">
+            <% for (let animal of animalitos) { %>
+                <div class="card" style="max-width: 350px;">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="<%- animal.imagen %>" class="img-fluid rounded-start" alt="...">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4"><%= animal.nombre %></p>
+                            </div>
+                        </div>
+                
+                        <div class="content">
+                            <%= animal.descripcion %>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+            <%} %> 
+        </div>
+
+    <br>
+
+    <a href="/users/principal"><button class="button is-danger is-light">Volver a la página incial</button></a><br>
+    
+    </body>
+
+<%- include('includes/foot.ejs') %>

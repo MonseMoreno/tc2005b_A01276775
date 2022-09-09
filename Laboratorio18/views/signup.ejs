@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+    <h1>Página de Monse</h1>
+    <h2>Registrate para entrar:</h2>
+    <br>
+    <form action="/users/signup" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+        <label for="nombre">Nombre completo: </label>
+        <input type="text" id="nombre" name="nombre" >
+        <br><br>
+        <label for="username">Nombre de usuario: </label>
+        <input type="text" id="username" name="username" >
+        <br><br>
+        <label for="password">Contraseña: </label>
+        <input type="password" id="password" name="password" >
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br><br>
+    <h4>¿Ya estás registrado?</h4>
+    <a href="/users/login"><button class="button is-danger is-light">Login</button></a>
+    <br><br>
+</div>
+    <br><br>
+<%- include('includes/foot.ejs') %>
