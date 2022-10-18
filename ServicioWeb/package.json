@@ -1,0 +1,38 @@
+{
+  "name": "laboratorio18",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parse": "^0.1.0",
+    "cookie-parse": "^0.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csrf": "^3.1.0",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "install": "^0.13.0",
+    "mysql2": "^2.3.3",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonseMoreno/tc2005b_A01276775.git"
+  },
+  "author": "Monse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MonseMoreno/tc2005b_A01276775/issues"
+  },
+  "homepage": "https://github.com/MonseMoreno/tc2005b_A01276775#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
